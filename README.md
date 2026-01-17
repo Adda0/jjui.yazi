@@ -1,31 +1,46 @@
 # lazygit.yazi
-Plugin for [Yazi](https://github.com/sxyazi/yazi) to manage git repos with [lazygit](https://github.com/jesseduffield/lazygit)
+
+Plugin for [Yazi](https://github.com/sxyazi/yazi) to manage [jujutsu](https://github.com/jj-vcs/jj) repos with [jjui](https://github.com/idursun/jjui).
+
 ## Dependencies
-Make sure [lazygit](https://github.com/jesseduffield/lazygit) is installed and in your `PATH`.
+
+Make sure [jjui](https://github.com/idursun/jjui) and [jujutsu](https://github.com/jj-vcs/jj) is installed and in your `PATH`.
+
 ## Installation
 
 ### Using `ya pkg`
-```
- ya pkg add Lil-Dank/lazygit
+
+```shell
+ ya pkg add Adda0/jjui
 ```
 
 ### Manual
+
 **Linux/macOS**
+
+```shell
+git clone https://github.com/Adda0/jjui.yazi.git ~/.config/yazi/plugins/jjui.yazi
 ```
-git clone https://github.com/Lil-Dank/lazygit.yazi.git ~/.config/yazi/plugins/lazygit.yazi
-```
+
 **Windows**
+
+```shell
+git clone https://github.com/Adda0/jjui.yazi.git %AppData%\yazi\config\plugins\jjui.yazi
 ```
-git clone https://github.com/Lil-Dank/lazygit.yazi.git %AppData%\yazi\config\plugins\lazygit.yazi
-```
+
 ## Configuration
-add this to your **keymap.toml** file
+
+Add the following to your **keymap.toml** file:
+
 ```toml
 [[mgr.prepend_keymap]]
-on   = [ "g", "i" ]
-run  = "plugin lazygit"
-desc = "run lazygit"
+on   = [ "g", "j" ]
+run  = "plugin jjui"
+desc = "run jjui"
 ```
-you can customize the keybinding however you like. Please refer to the [keymap.toml](https://yazi-rs.github.io/docs/configuration/keymap) documentation
+
+You can customize the keybinding however you like. Please refer to the [keymap.toml](https://yazi-rs.github.io/docs/configuration/keymap) documentation.
+
 ## Disclaimer
-**THIS PLUGIN IS FOR THE STABLE RELEASE OF YAZI, DON'T PROPOSE ANY CHANGES BASED ON PRE-RELEASES OF YAZI**
+
+**THIS PLUGIN IS FOR THE STABLE RELEASE OF YAZI, DON'T PROPOSE ANY CHANGES BASED ON PRE-RELEASES OF YAZI.**
