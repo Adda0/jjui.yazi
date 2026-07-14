@@ -1,4 +1,4 @@
-# lazygit.yazi
+# jjui.yazi
 
 Plugin for [Yazi](https://github.com/sxyazi/yazi) to manage [jujutsu](https://github.com/jj-vcs/jj) repos with [jjui](https://github.com/idursun/jjui).
 
