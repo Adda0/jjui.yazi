@@ -1,10 +1,10 @@
 return {
     entry = function()
         local output = Command("jj"):arg("status"):stderr(Command.PIPED):output()
-        if output.stderr ~= "" then
+        if not output.status.success then
             ya.notify({
                 title = "jjui",
-                content = "Not in a jj directory\nError: " .. output.stderr,
+                content = string.format("jj: exit code %s\n", output.status.code) .. output.stderr,
                 level = "warn",
                 timeout = 5,
             })
